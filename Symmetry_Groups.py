@@ -60,7 +60,7 @@ class SymGroup:
             self.order = len(groupElements)
             self.generators = generators
             self.elements = np.array(groupElements)
-            # self.conjugacyClasses = generateConjugacyClasses(groupElements)
+            self.conjugacyClasses = generateConjugacyClasses(groupElements)
 
         else:
             # the cartesian product of the diagonal group and the permutation group (while removing duplicates)
@@ -80,7 +80,7 @@ class SymGroup:
             self.order = len(groupElements)
             self.generators = generators
             self.elements = np.array(groupElements)
-            # self.conjugacyClasses = generateConjugacyClasses(groupElements)
+            self.conjugacyClasses = generateConjugacyClasses(groupElements)
 
     def __repr__(self):
         return (

@@ -12,15 +12,15 @@ def main():
     # W = IQP.IQPoly(
     #     (IQP.LOOP, [3,3,3,3,3,3])
     # )
-    W = IQP.IQPoly(
-        (IQP.CHAIN, [4,5,3,2])
-    )
     # W = IQP.IQPoly(
-    #     (IQP.FERMAT, [4]),
-    #     (IQP.FERMAT, [4]),
-    #     (IQP.FERMAT, [4]),
-    #     (IQP.FERMAT, [6])
+    #     (IQP.CHAIN, [4,5,3,2])
     # )
+    W = IQP.IQPoly(
+        (IQP.FERMAT, [4]),
+        (IQP.FERMAT, [4]),
+        (IQP.FERMAT, [4]),
+        (IQP.FERMAT, [6])
+    )
     print(W)
     print(W.weights)
     print(W.inverse_exponent_matrix)
@@ -39,16 +39,16 @@ def main():
     gens = '\n'.join(f'{str(gen)}\n' for gen in G_MAX.generators)
     elems = '\n'.join(f'{elem}\n' for elem in G_MAX.elements)
     # genRepr = '\n'.join(f'{elem}\n' for elem in G_MAX.element_generator_representation)
-    # print('Generators:')
-    # print(gens)
-    # print('Elements:')
-    # print(elems)
+    print('Generators:')
+    print(gens)
+    print('Elements:')
+    print(elems)
     # print('Generator Representation:')
     # print(genRepr)
-    # print(f'Conjugacy Classes:')
-    # for index, cc in enumerate(G_MAX.conjugacyClasses):
-    #     print(f'Conjugacy Class Number {index + 1} with size {len(cc)}.')
-    #     print('\n'.join(f'{elem}\n' for elem in cc))
+    print(f'Conjugacy Classes:')
+    for index, cc in enumerate(G_MAX.conjugacyClasses):
+        print(f'Conjugacy Class Number {index + 1} with size {len(cc)}.')
+        print('\n'.join(f'{elem}\n' for elem in cc))
 
 
     
